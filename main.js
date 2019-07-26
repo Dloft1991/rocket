@@ -1,26 +1,49 @@
-function Rocket() {
-//    const rocket = document.getElementById("rocket");
-   this.x = 0;
-   this.y = 0;
-   this.xspeed = 0;
-   this.yspeed = 0;
+var rocket=document.getElementById("rocket");
+var container=document.getElementById("container");
+
+var rocketLeft = 0;
+var rocketTop = 70;
+
+function anim(e){
+    if(e.keyCode==39){
+        rocketLeft +=15;
+        rocket.style.left = rocketLeft + 'px';
+        console.log("left")
+    }
+    if(e.keyCode==37){
+        rocketLeft -=15;
+        rocket.style.left = rocketLeft + 'px';
+        if(rocketLeft <=0){
+            rocketLeft +15;
+        }
+    }
+    if(e.keyCode==40){
+        rocketTop +=15;
+        rocket.style.top = rocketTop + 'px';
+    }
+    if(e.keyCode==38){
+        rocketTop -=15;
+        rocket.style.top = rocketTop + 'px';
+        if(rocketTop <=0){
+            rocketTop +15;
+            console.log("up")
+        }
+    }
 }
 
+// function anim(e){
+//     if(e.keyCode==40){
+//         rocketTop +=10;
+//         rocket.style.top = rocketTop + 'px';
+//     }
+//     if(e.keyCode==38){
+//         rocketTop -=10;
+//         rocket.style.top = rocketTop + 'px';
+//         if(rocketTop <=0){
+//             rocketTop +10;
+//             console.log("up")
+//         }
+//     }
+// }
 
-function moveUp() {
-    console.log("This is up");
-    rocket.posY++;
-}
-
-function moveDown() {
-    console.log("This is down");
-    rocket.posY--;
-}
-
-function moveLeft() {
-    console.log("This is left");
-}
-
-function moveRight() {
-    console.log("This is right");
-}
+document.onkeydown = anim;
