@@ -1,8 +1,8 @@
 var rocket=document.getElementById("rocket");
 var container=document.getElementById("container");
 
-var rocketLeft = 0;
-var rocketTop = 70;
+var rocketLeft = 550;
+var rocketTop = 500;
 
 function anim(e){
     if(e.keyCode==39){
@@ -27,6 +27,9 @@ function anim(e){
         if(rocketTop <=0){
             rocketTop +15;
             console.log("up")
+        }
+        else if(rocketTop ===50) {
+            rocketTop -450;
         }
     }
 }

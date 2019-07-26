@@ -11,27 +11,44 @@
     <title>Rocket Launcher</title>
 <style>
 #container{
-    height: 400px;
-    width: 600px;
-    background-color: yellow;
+    /* background-image: url("https://ak0.picdn.net/shutterstock/videos/7860610/thumb/1.jpg");
+    background-repeat: no-repeat; */
+    /* height: 600px;
+    width: 1200px; */
+    /* background-color: yellow;
     outline: 1px solid black; 
+    position: relative; */
+}
+.sky{
     position: relative;
+    height: 600px;
+    width: 1200px;
 }
 #rocket {
     position: absolute;
     height: 50px;
     width: 50px;
-    outline: 1px solid black;
-    background-color: red;
-    left: 50;
-    top: 50;
+    /* outline: 1px solid black;
+    background-color: red; */
+    left: 550px;
+    top: 500px;
+}
+h1 {
+    position: relative;
+    background-color: green;
+    width: 1200px;
+    height: 50px;
 }
 </style>
 </head>
 <body>
      <h1>Launch the Rocket!</h1>
-     
-     <div id="rocket"></div>
+     <div id="container">
+         <img class="sky" src="https://ak0.picdn.net/shutterstock/videos/7860610/thumb/1.jpg">
+     <div id="rocket">
+         <img src="486c34cf5b3b4badd52bc427dbeb44a1-rocket-cartoon-by-vexels.png">
+     </div>
+    </div>
      
     
     </body>
